@@ -26,7 +26,7 @@
         {
             if(ini_get('register_globals'))
             {
-                $globalsAry = ['_SESSION' , '_COOKIS' , '_POST' , '_GET' , '_REQUEST' , '_SERVER' , '_ENV' , '_FILES']
+                $globalsAry = ['_SESSION' , '_COOKIS' , '_POST' , '_GET' , '_REQUEST' , '_SERVER' , '_ENV' , '_FILES'];
                 foreach($globalsAry as $g)
                 {
                     foreach($GLOBALS[$g] as $k => $v)

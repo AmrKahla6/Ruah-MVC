@@ -16,5 +16,14 @@
             $queryParams = $url;
 
             $dispatch = new $controller($controller_name , $action);
+
+            if(method_exists($controller , $action))
+            {
+                call_user_func_array([$dispatch , $action] , $queryParams);
+            }
+            else
+            {
+                die('That Method does not exist in the controller\"' .$controller_name . '\"');
+            }
         }
     }
